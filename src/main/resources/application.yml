@@ -1,17 +1,15 @@
 server:
     port: 9999
-spring:
+app:
     datasource:
-        type: com.zaxxer.hikari.HikariDataSource
-        hikari:
-            connectionInitSql: set names utf8mb4;
-            idleTimeout: 60000
-            minimumIdle: 2
-            maximumPoolSize: 20
-            connectionTimeout: 30000
-            poolName: MyPoolName
-            connectionTestQuery: SELECT 1
-        url:    jdbc:mysql://gz-cdb-0e3q96sk.sql.tencentcdb.com:62995/oms?characterEncoding=utf8&useUnicode=true&autoReconnectForPools=true&zeroDateTimeBehavior=convertToNull
+        connectionInitSql: set names utf8mb4;
+        idleTimeout: 60000
+        minimumIdle: 2
+        maximumPoolSize: 20
+        connectionTimeout: 30000
+        poolName: MyPoolName
+        connectionTestQuery: SELECT 1
+        jdbc-url:    jdbc:mysql://gz-cdb-0e3q96sk.sql.tencentcdb.com:62995/oms?characterEncoding=utf8&useUnicode=true&autoReconnectForPools=true&zeroDateTimeBehavior=convertToNull
         username:   oms
         password:   oms-secret-plan            
 
